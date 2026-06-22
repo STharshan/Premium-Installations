@@ -5,7 +5,7 @@ const headingWords = [
   "Step", "inside", "and", "discover", "a", "new", "standard", "of", "living",
 ];
 
-export default function CtaContactSection() {
+export default function ContactSection() {
   // 1. Form State
   const [formData, setFormData] = useState({
     firstName: "",
