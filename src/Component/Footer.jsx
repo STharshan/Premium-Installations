@@ -6,6 +6,8 @@ const footerLinks = [
   ['About Us', 'Our Services', 'Events', 'Contact Us'],
 ]
 
+const footerSurface = '#f7f3eb'
+
 function FacebookIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-current">
@@ -50,28 +52,34 @@ function BrandMark() {
 
 export default function Footer() {
   return (
-    <footer className="px-3 pb-8 pt-4 sm:px-6 lg:px-8">
+    <footer className="px-3 pb-10 pt-6 sm:px-6 lg:px-8" style={{ backgroundColor: footerSurface }}>
       {/* Absolute positioning relative anchor context wrapper */}
-      <div className="relative mx-auto max-w-6xl">
+      <div className="relative mx-auto max-w-[96rem]">
 
         {/* ========================================== */}
         {/* TOP LEFT CUTOUT COMPOSITE                  */}
         {/* ========================================== */}
-        <div className="hidden md:block absolute top-0 left-0 bg-white w-48 h-16 rounded-br-3xl z-20">
-          <div className="absolute -bottom-6 left-0 w-6 h-6 rounded-tl-3xl shadow-[-6px_-6px_0_0_#fff]" />
-          <div className="absolute top-0 -right-6 w-6 h-6 rounded-tl-3xl shadow-[-6px_-6px_0_0_#fff]" />
+        <div
+          className="absolute left-0 top-0 z-20 hidden h-16 w-44 rounded-br-3xl md:block lg:w-52"
+          style={{ backgroundColor: footerSurface }}
+        >
+          <div className="absolute -bottom-6 left-0 h-6 w-6 rounded-tl-3xl" style={{ boxShadow: `-6px -6px 0 0 ${footerSurface}` }} />
+          <div className="absolute top-0 -right-6 h-6 w-6 rounded-tl-3xl" style={{ boxShadow: `-6px -6px 0 0 ${footerSurface}` }} />
         </div>
 
         {/* ========================================== */}
         {/* TOP RIGHT CUTOUT COMPOSITE                 */}
         {/* ========================================== */}
-        <div className="hidden md:block absolute top-0 right-0 bg-white w-48 h-16 rounded-bl-3xl z-20">
-          <div className="absolute -bottom-6 right-0 w-6 h-6 rounded-tr-3xl shadow-[6px_-6px_0_0_#fff]" />
-          <div className="absolute top-0 -left-6 w-6 h-6 rounded-tr-3xl shadow-[6px_-6px_0_0_#fff]" />
+        <div
+          className="absolute right-0 top-0 z-20 hidden h-16 w-44 rounded-bl-3xl md:block lg:w-52"
+          style={{ backgroundColor: footerSurface }}
+        >
+          <div className="absolute -bottom-6 right-0 h-6 w-6 rounded-tr-3xl" style={{ boxShadow: `6px -6px 0 0 ${footerSurface}` }} />
+          <div className="absolute top-0 -left-6 h-6 w-6 rounded-tr-3xl" style={{ boxShadow: `6px -6px 0 0 ${footerSurface}` }} />
         </div>
 
         {/* Main Dark Footer Wrapper */}
-        <div className="relative overflow-hidden rounded-[2rem] bg-[#07090d] text-white shadow-[0_30px_100px_rgba(0,0,0,0.5)]">
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#07090d] text-white shadow-[0_30px_100px_rgba(0,0,0,0.28)]">
           {/* Background Gradients & Accents */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(249,115,22,0.16),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_34%),linear-gradient(180deg,#12151b_0%,#07090d_100%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.03)_0,rgba(255,255,255,0)_22%),linear-gradient(315deg,rgba(255,255,255,0.03)_0,rgba(255,255,255,0)_20%)]" />
@@ -79,11 +87,11 @@ export default function Footer() {
           <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.55))]" />
 
           {/* Core Content Area */}
-          <div className="relative px-5 pb-5 pt-16 sm:px-8 sm:pt-20 lg:px-10 lg:pt-24">
+          <div className="relative px-5 pb-6 pt-16 sm:px-8 sm:pt-20 lg:px-12 lg:pt-24 xl:px-16">
 
             {/* Newsletter Subscription Row */}
-            <div className="flex flex-col gap-5 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-              <div>
+            <div className="flex flex-col gap-6 px-3 py-5 sm:px-4 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:px-6">
+              <div className="max-w-xl">
                 <h2 className="text-2xl font-semibold tracking-tight sm:text-4xl">
                   Subscribe Newsletter
                 </h2>
@@ -92,20 +100,20 @@ export default function Footer() {
                 </p>
               </div>
 
-              <form className="w-full sm:max-w-xl">
+              <form className="w-full lg:max-w-[40rem] xl:max-w-[46rem]">
                 <label htmlFor="newsletter-email" className="sr-only">
                   Email address
                 </label>
-                <div className="flex flex-col gap-3 rounded-full bg-white p-2 shadow-[0_10px_30px_rgba(0,0,0,0.2)] sm:flex-row sm:items-center">
+                <div className="flex flex-col gap-3 rounded-[2rem] bg-white p-2 shadow-[0_10px_30px_rgba(0,0,0,0.2)] sm:flex-row sm:items-center sm:rounded-full">
                   <input
                     id="newsletter-email"
                     type="email"
                     placeholder="Enter Your Email Address..."
-                    className="min-w-0 flex-1 rounded-full border-0 bg-transparent px-4 py-3 text-sm text-slate-900 outline-none placeholder:text-slate-400"
+                    className="min-w-0 flex-1 rounded-full border-0 bg-transparent px-5 py-3 text-sm text-slate-900 outline-none placeholder:text-slate-400 sm:px-6"
                   />
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-orange-500 px-5 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange-400"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-orange-500 px-5 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange-400 sm:px-6"
                   >
                     Subscribe
                     <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black/80 text-[11px]">
@@ -117,7 +125,7 @@ export default function Footer() {
             </div>
 
             {/* Middle Layout Blocks */}
-            <div className="mt-8 grid gap-8 lg:grid-cols-[1.2fr_1.8fr] lg:gap-12">
+            <div className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_1.9fr] lg:gap-14">
               <div className="max-w-md">
                 <div className="flex items-center gap-3">
                   <BrandMark />
