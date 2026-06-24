@@ -7,7 +7,7 @@ import HeroSection from '../Component/Home/HeroSection'
 import Services from '../Component/Home/Service'
 import WhyChooseUs from '../Component/Home/Whychoose'
 import WhoWeAre from '../Component/Home/WhoWeAre'
-import Contact from '../Component/Home/ContactSection'
+
 import About from '../Component/Home/about'
 import Testimonials from '../Component/Home/TestimonialsCarousel'
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
       <WhoWeAre />
       <WhyChooseUs />
       <FAQSection />
-      <Contact />
+  
       <ContactSection />
     </main>
   )
