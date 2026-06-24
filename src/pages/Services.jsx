@@ -1,15 +1,11 @@
-import Hero from '../Component/SingleService/hero';
-import ServiceInfoSection from '../Component/SingleService/service';
-import TestimonialSection from '../Component/SingleService/TestimonialSection';
-
+import ServiceShowcase from '../Component/Home/Service';
+import HomeContactSection from '../Component/Home/ContactSection';
 
 const Services = () => {
   return (
     <main className="bg-white">
-      <Hero />
-      <ServiceInfoSection />
-      <TestimonialSection />
-    
+      <ServiceShowcase />
+      <HomeContactSection />
     </main>
   );
 };
