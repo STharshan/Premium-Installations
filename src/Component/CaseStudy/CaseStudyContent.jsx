@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { CASE_STUDIES } from './CaseStudyGrid';
 
 // Live actual high-quality imagery content from the project screen structure
 const CASE_STUDY_IMAGES = [
@@ -19,7 +21,9 @@ const CASE_STUDY_IMAGES = [
 ];
 
 export default function ArupCaseStudyPage() {
+  const { studyId } = useParams();
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const activeStudy = CASE_STUDIES.find((study) => study.id === studyId) || CASE_STUDIES[0];
 
   const triggerNext = () => {
     setCurrentSlideIndex((prev) => (prev + 1) % CASE_STUDY_IMAGES.length);
@@ -104,11 +108,11 @@ export default function ArupCaseStudyPage() {
         
         {/* Dynamic upper breadcrumb block tracing line links */}
         <div className="flex items-center gap-2 text-xs text-neutral-500 uppercase tracking-widest font-mono mb-6">
-          <span>Home</span>
+          <Link to="/" className="transition hover:text-white">Home</Link>
           <span>/</span>
-          <span>Case studies</span>
+          <Link to="/case-study" className="transition hover:text-white">Case studies</Link>
           <span>/</span>
-          <span className="text-neutral-300">ARUP Edinburgh</span>
+          <span className="text-neutral-300">{activeStudy.title}</span>
         </div>
 
         {/* Split structural layout representation */}
@@ -118,7 +122,7 @@ export default function ArupCaseStudyPage() {
           <div className="lg:col-span-8 space-y-10">
             <div>
               <h1 className="text-5xl lg:text-6xl font-black tracking-tighter uppercase text-white mb-6">
-                ARUP
+                {activeStudy.title}
               </h1>
               <h2 className="text-2xl lg:text-3xl font-bold tracking-tight text-neutral-100 leading-tight">
                 An office fit out achieving a <span className="text-[#B62025] dark:text-[#FF4B4B]">50 per cent reduction</span> in embodied carbon
@@ -126,9 +130,8 @@ export default function ArupCaseStudyPage() {
             </div>
 
             <p className="text-neutral-400 text-base lg:text-lg leading-relaxed max-w-3xl">
-              A new Edinburgh office for ARUP needed to reflect the company's strong focus on sustainability and 
-              consideration towards the environment. We achieved the clear aim of reducing embodied carbon content at 
-              every phase whilst creating a flexible, stylish and comfortable space.
+              {activeStudy.description} We developed this case study page so each selected project now opens in its own
+              detail view while keeping the same premium presentation layout.
             </p>
 
             {/* Split row matching exact layout for partners listing & clients side quote */}
@@ -196,7 +199,8 @@ export default function ArupCaseStudyPage() {
                 </svg>
                 <span className="text-xs font-bold uppercase tracking-wider">Location</span>
               </div>
-              <span className="text-sm font-semibold text-white">Edinburgh</span>
+              <span className="text-sm font-semibold text-white">{activeStudy.location}</span>
+              
             </div>
 
             {/* Meta Row Parameter Block 2 */}
@@ -207,7 +211,7 @@ export default function ArupCaseStudyPage() {
                 </svg>
                 <span className="text-xs font-bold uppercase tracking-wider">Project Size</span>
               </div>
-              <span className="text-sm font-semibold text-white">20,000 sq ft</span>
+              <span className="text-sm font-semibold text-white">{activeStudy.size}</span>
             </div>
 
             {/* Meta Row Parameter Block 3 */}
@@ -267,9 +271,12 @@ export default function ArupCaseStudyPage() {
               </div>
               
               <div>
-                <button className="px-6 py-3 bg-[#B62025] hover:bg-red-700 active:scale-97 text-white font-bold tracking-wide uppercase text-xs transition-all shadow-md rounded-none">
+                <Link
+                  to="/case-study"
+                  className="inline-flex px-6 py-3 bg-[#B62025] hover:bg-red-700 active:scale-97 text-white font-bold tracking-wide uppercase text-xs transition-all shadow-md rounded-none"
+                >
                   View project
-                </button>
+                </Link>
               </div>
             </div>
           </div>

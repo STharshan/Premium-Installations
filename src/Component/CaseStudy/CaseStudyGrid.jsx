@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
-const CASE_STUDIES = [
+export const CASE_STUDIES = [
   {
     id: 'investment-management',
     title: 'Investment Management Firm',
@@ -101,8 +102,9 @@ export default function CaseStudyGrid() {
             {CASE_STUDIES.map((study) => {
               const isActive = study.id === activeId;
               return (
-                <div
+                <Link
                   key={study.id}
+                  to={`/case-study/${study.id}`}
                   data-id={study.id}
                   ref={(el) => (itemRefs.current[study.id] = el)}
                   className={`transition-all duration-500 ease-in-out transform min-h-[180px] flex flex-col justify-center ${
@@ -114,7 +116,7 @@ export default function CaseStudyGrid() {
                   <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-neutral-900 leading-[1.1]">
                     {study.title}
                   </h2>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -162,6 +164,13 @@ export default function CaseStudyGrid() {
                 <p className="text-neutral-500 text-sm font-light leading-relaxed max-w-md pt-1">
                   {activeStudy.description}
                 </p>
+
+                <Link
+                  to={`/case-study/${activeStudy.id}`}
+                  className="inline-flex items-center rounded-full bg-neutral-950 px-5 py-3 text-xs font-bold uppercase tracking-[0.18em] text-white transition hover:bg-neutral-800"
+                >
+                  Open Case Study
+                </Link>
               </div>
 
             </div>
