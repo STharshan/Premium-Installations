@@ -12,7 +12,7 @@ import About from '../Component/Home/about'
 import Testimonials from '../Component/Home/TestimonialsCarousel'
 const Home = () => {
   return (
-    <main className="bg-[#f5f5f5]">
+    <main >
       <HeroSection />
       <Services />
       <About />
