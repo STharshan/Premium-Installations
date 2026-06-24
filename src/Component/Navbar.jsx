@@ -1,12 +1,11 @@
 import { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 const navItems = [
-  { label: 'Home', href: '#' },
-  { label: 'Pages', href: '#' },
-  { label: 'Services', href: '#' },
-  { label: 'Projects', href: '#' },
-  { label: 'News', href: '#' },
-  { label: 'Contact', href: '#' },
+  { label: 'Home', to: '/' },
+  { label: 'Services', to: '/services' },
+  { label: 'Projects', to: '/case-study' },
+  { label: 'Contact', to: '/contact' },
 ]
 
 function SearchIcon() {
@@ -72,8 +71,8 @@ export default function Navbar() {
 
       <div className="mx-auto max-w-6xl rounded-[1.75rem] border border-white/15 bg-white/12 shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl">
         <div className="flex items-center justify-between gap-3 px-4 py-3 sm:px-5 lg:px-6">
-          <a
-            href="#"
+          <Link
+            to="/"
             className="flex min-w-0 items-center gap-3 text-white"
             aria-label="Constrc home"
           >
@@ -90,17 +89,21 @@ export default function Navbar() {
                 Construction Studio
               </div>
             </div>
-          </a>
+          </Link>
 
           <nav className="hidden items-center gap-1 xl:flex" aria-label="Primary">
             {navItems.map((item) => (
-              <a
+              <NavLink
                 key={item.label}
-                href={item.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-white/80 transition hover:bg-white/10 hover:text-white"
+                to={item.to}
+                className={({ isActive }) =>
+                  `rounded-full px-4 py-2 text-sm font-medium transition hover:bg-white/10 hover:text-white ${
+                    isActive ? 'bg-white/12 text-white' : 'text-white/80'
+                  }`
+                }
               >
                 {item.label}
-              </a>
+              </NavLink>
             ))}
           </nav>
 
@@ -113,12 +116,12 @@ export default function Navbar() {
               <SearchIcon />
             </button>
 
-            <a
-              href="#"
+            <Link
+              to="/contact"
               className="rounded-full bg-orange-500 px-5 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-orange-500/30 transition hover:bg-orange-400"
             >
               Get a Quote
-            </a>
+            </Link>
 
             <button
               type="button"
@@ -148,14 +151,18 @@ export default function Navbar() {
           <div className="min-h-0 border-t border-white/10 px-4 pb-4 pt-2 sm:px-5">
             <div className="flex flex-col gap-1">
               {navItems.map((item) => (
-                <a
+                <NavLink
                   key={item.label}
-                  href={item.href}
-                  className="rounded-2xl px-4 py-3 text-sm font-medium text-white/85 transition hover:bg-white/10 hover:text-white"
+                  to={item.to}
+                  className={({ isActive }) =>
+                    `rounded-2xl px-4 py-3 text-sm font-medium transition hover:bg-white/10 hover:text-white ${
+                      isActive ? 'bg-white/10 text-white' : 'text-white/85'
+                    }`
+                  }
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </NavLink>
               ))}
             </div>
 
@@ -167,12 +174,13 @@ export default function Navbar() {
                 <SearchIcon />
                 Search
               </button>
-              <a
-                href="#"
+              <Link
+                to="/contact"
                 className="inline-flex items-center justify-center rounded-full bg-orange-500 px-5 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-orange-500/30 transition hover:bg-orange-400 sm:flex-1"
+                onClick={() => setMenuOpen(false)}
               >
                 Get a Quote
-              </a>
+              </Link>
             </div>
           </div>
         </div>

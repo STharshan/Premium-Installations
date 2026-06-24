@@ -1,7 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, { useEffect } from "react";
+import React from "react";
 
 import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Services from "./pages/Services";
+import CaseStudy from "./pages/CaseStudy";
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
 
@@ -12,6 +15,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/case-study" element={<CaseStudy />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>

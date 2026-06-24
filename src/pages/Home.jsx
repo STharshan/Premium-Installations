@@ -1,6 +1,6 @@
 
 import Banner from '../Component/Home/Banner'
-import ContactSection from '../Component/Home/Contact'
+import ContactSection from '../Component/Home/ContactSection'
 import FAQSection from '../Component/Home/Faq'
 import Gallery from '../Component/Home/Gallery'
 import HeroSection from '../Component/Home/HeroSection'

@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
   const highlights = [
@@ -70,9 +71,9 @@ const AboutSection = () => {
 
           {/* Action Premium Deep Block Button */}
           <div className="pt-4">
-            <button className="bg-neutral-950 text-white font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-xl shadow-lg hover:bg-neutral-900 transition-colors duration-300 active:scale-98">
+            <Link to="/case-study" className="inline-flex bg-neutral-950 text-white font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-xl shadow-lg hover:bg-neutral-900 transition-colors duration-300 active:scale-98">
               View the Projects
-            </button>
+            </Link>
           </div>
 
         </div>

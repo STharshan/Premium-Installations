@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState(2); // Default to Commercial Construction (Index 2)
@@ -117,12 +118,12 @@ const Services = () => {
 
             {/* Premium Pill Floating Discover Action Control Badge */}
             <div className="absolute bottom-[-4px] right-[-4px] z-20 bg-neutral-950 pl-8 pt-8 rounded-tl-[40px]">
-              <button className="flex items-center gap-4 bg-white text-black pl-7 pr-2 py-2 rounded-full font-bold text-xs uppercase tracking-wider transition-all duration-300 hover:bg-neutral-200 group shadow-2xl">
+              <Link to="/services" className="flex items-center gap-4 bg-white text-black pl-7 pr-2 py-2 rounded-full font-bold text-xs uppercase tracking-wider transition-all duration-300 hover:bg-neutral-200 group shadow-2xl">
                 Discover More
                 <div className="w-10 h-10 rounded-full bg-neutral-950 text-white flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">
                   <ArrowUpRight size={16} strokeWidth={2.5} />
                 </div>
-              </button>
+              </Link>
             </div>
 
           </div>
