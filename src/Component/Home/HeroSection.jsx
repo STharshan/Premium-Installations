@@ -22,9 +22,6 @@ export default function HeroSection() {
       <div className="mt-8 grid gap-8 lg:mt-10 lg:grid-cols-12 lg:gap-10">
             <div className="lg:col-span-4 lg:flex lg:min-h-[540px] lg:flex-col lg:justify-end">
               <div className="relative max-w-lg">
-                <p className="hidden -translate-x-1/2 text-xs font-medium uppercase tracking-[0.45em] text-[#8a8a8a] lg:absolute lg:left-0 lg:top-1/2 lg:block lg:-rotate-90 lg:transform">
-                  Since 2015
-                </p>
                 <h1 className="max-w-md text-4xl font-medium tracking-tight text-[#0f0f0f] sm:text-5xl lg:text-[4.35rem] lg:leading-[0.98]">
                   Where vision meets construction
                 </h1>
