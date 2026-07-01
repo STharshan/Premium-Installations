@@ -1,4 +1,3 @@
-
 const footerLinks = [
   ['Solutions', 'Pricing', 'Meet Our Team', 'Blog', 'HR Guides'],
   ['Testimonials', 'Outsourcing', 'Privacy Policy', 'HR Training', 'Careers'],
@@ -41,11 +40,11 @@ function InstagramIcon() {
 
 function BrandMark() {
   return (
-    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#2b2b2b] shadow-lg shadow-black/10">
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-7 w-7 fill-[#fafaf8]">
-        <path d="M4 18.5 10.8 5.5l4.1 7.6 2.4-3.4L20 18.5H4Z" />
-      </svg>
-    </div>
+    <img
+      src="/logo.png"
+      alt="Premium Installations"
+      className="h-12 w-50 rounded-xl shrink-0 object-contain bg-[#fafaf8] p-1 shadow-lg shadow-black/10"
+    />
   )
 }
 
@@ -114,12 +113,6 @@ export default function Footer() {
               <div className="max-w-md">
                 <div className="flex items-center gap-3">
                   <BrandMark />
-                  <div>
-                    <div className="text-2xl font-semibold tracking-tight">Constrc</div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-[#8a8a8a]">
-                      Construction Studio
-                    </p>
-                  </div>
                 </div>
 
                 <p className="mt-5 max-w-sm text-sm leading-6 text-[#c5c5c1]">
@@ -130,32 +123,16 @@ export default function Footer() {
                 <div className="mt-6 flex items-center gap-3">
                   <span className="text-sm font-medium text-[#fafaf8]">Follow Us:</span>
                   <div className="flex items-center gap-2">
-                    <a
-                      href="#"
-                      aria-label="Facebook"
-                      className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#fafaf8] transition hover:bg-[#a6874c]"
-                    >
+                    <a href="#" aria-label="Facebook" className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#fafaf8] transition hover:bg-[#a6874c]">
                       <FacebookIcon />
                     </a>
-                    <a
-                      href="#"
-                      aria-label="X"
-                      className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#fafaf8] transition hover:bg-[#a6874c]"
-                    >
+                    <a href="#" aria-label="X" className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#fafaf8] transition hover:bg-[#a6874c]">
                       <XIcon />
                     </a>
-                    <a
-                      href="#"
-                      aria-label="YouTube"
-                      className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#fafaf8] transition hover:bg-[#a6874c]"
-                    >
+                    <a href="#" aria-label="YouTube" className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#fafaf8] transition hover:bg-[#a6874c]">
                       <YoutubeIcon />
                     </a>
-                    <a
-                      href="#"
-                      aria-label="Instagram"
-                      className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#fafaf8] transition hover:bg-[#a6874c]"
-                    >
+                    <a href="#" aria-label="Instagram" className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#fafaf8] transition hover:bg-[#a6874c]">
                       <InstagramIcon />
                     </a>
                   </div>
@@ -195,8 +172,8 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="pointer-events-none absolute bottom-10 left-1/2 -z-0 hidden -translate-x-1/2 select-none text-[clamp(4rem,18vw,12rem)] font-black leading-none tracking-tight text-white/5 lg:block">
-              constrc
+            <div className="pointer-events-none absolute bottom-10 left-1/2 -z-0 hidden -translate-x-1/2 select-none text-[clamp(1rem,10vw,5rem)] font-black leading-none tracking-tight text-white/5 lg:block">
+              Premium Installations & Co
             </div>
           </div>
         </div>

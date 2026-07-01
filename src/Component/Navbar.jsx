@@ -74,21 +74,13 @@ export default function Navbar() {
           <Link
             to="/"
             className="flex min-w-0 items-center gap-3 text-[#111111]"
-            aria-label="Constrc home"
+            aria-label="Premium Installations home"
           >
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#2b2b2b] shadow-lg shadow-black/10">
-              <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 fill-[#fafaf8]">
-                <path d="M4 18.5 10.8 5.5l4.1 7.6 2.4-3.4L20 18.5H4Z" />
-              </svg>
-            </div>
-            <div className="min-w-0">
-              <div className="truncate text-xl font-semibold tracking-tight sm:text-2xl">
-                Constrc
-              </div>
-              <div className="hidden text-[11px] uppercase tracking-[0.28em] text-[#8a8a8a] sm:block">
-                Construction Studio
-              </div>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Premium Installations"
+              className="h-11 w-50 shrink-0 object-contain "
+            />
           </Link>
 
           <nav className="hidden items-center gap-1 xl:flex" aria-label="Primary">
