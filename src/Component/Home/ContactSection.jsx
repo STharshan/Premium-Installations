@@ -4,8 +4,8 @@ import { ArrowUpRight, ChevronDown, Clock3, Mail, MapPin, Phone, Play } from 'lu
 const contactItems = [
   { title: 'Call Us', value: '+00 (41) 039 4688', Icon: Phone },
   { title: 'Our Email Us', value: 'example@gmail.com', Icon: Mail },
-  { title: 'Opening Hours', value: 'Mon - Fri: 09am - 07pm', Icon: Clock3 },
-  { title: 'Location', value: '1712 Down Street Monmouth', Icon: MapPin },
+  { title: 'Opening Hours', value: 'Mon - Fri: 09am - 05pm sat-sun: closed', Icon: Clock3 },
+  { title: 'Location', value: ' 147 Church Walk, London N16 8QW, United Kingdom', Icon: MapPin },
 ];
 
 export default function ContactSection() {
