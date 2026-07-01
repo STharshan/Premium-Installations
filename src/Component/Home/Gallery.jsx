@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
@@ -64,15 +64,15 @@ const Gallery = () => {
   const currentProject = projects[activeIndex];
 
   return (
-    <section className="overflow-hidden bg-white px-6 py-24 text-neutral-900 sm:px-10 lg:px-20 lg:py-32 font-sans">
+    <section className="overflow-hidden bg-[#fafaf8] px-6 py-24 text-[#0f0f0f] sm:px-10 lg:px-20 lg:py-32 font-sans">
       <div className="mx-auto max-w-[1680px] relative">
         
         {/* Section Header */}
         <div className="text-center mb-16 lg:mb-24">
-          <p className="text-[14px] uppercase tracking-wider text-neutral-400 font-semibold">
+          <p className="text-[14px] uppercase tracking-wider text-[#8a8a8a] font-semibold">
             You may also be interested in
           </p>
-          <h2 className="mx-auto mt-4 max-w-4xl text-3xl sm:text-4xl lg:text-[44px] font-bold uppercase leading-[1.05] tracking-tight text-neutral-950">
+          <h2 className="mx-auto mt-4 max-w-4xl text-3xl sm:text-4xl lg:text-[44px] font-bold uppercase leading-[1.05] tracking-tight text-[#0f0f0f]">
             A selection of newly built modular and tiny homes
           </h2>
         </div>
@@ -95,14 +95,14 @@ const Gallery = () => {
               {/* LEFT SIDEBAR: Text Content Block */}
               <div className="flex h-full flex-col justify-between pb-1 pt-1 lg:min-h-[33.5rem] z-20">
                 <div className="space-y-4">
-                  <h3 className="text-[34px] font-bold uppercase leading-[1.05] tracking-tight text-neutral-950">
+                  <h3 className="text-[34px] font-bold uppercase leading-[1.05] tracking-tight text-[#0f0f0f]">
                     {currentProject.title}
                   </h3>
-                  <div className="text-[14px] tracking-wide text-neutral-400 font-medium">
+                  <div className="text-[14px] tracking-wide text-[#8a8a8a] font-medium">
                     {currentProject.location}
                   </div>
                 </div>
-                <p className="max-w-[24rem] lg:max-w-[17rem] text-[15px] leading-[1.7] text-neutral-500 mt-6 lg:mt-0 font-normal">
+                <p className="max-w-[24rem] lg:max-w-[17rem] text-[15px] leading-[1.7] text-[#545454] mt-6 lg:mt-0 font-normal">
                   {currentProject.desc}
                 </p>
               </div>
@@ -130,11 +130,11 @@ const Gallery = () => {
               <div className="flex h-full flex-col justify-end pt-6 lg:min-h-[33.5rem] lg:pt-0 z-20">
                 <div className="flex items-start justify-start lg:justify-end">
                   <a 
-                    className="inline-flex items-center gap-3 text-[13px] font-bold uppercase tracking-wider text-neutral-900 group" 
+                    className="inline-flex items-center gap-3 text-[13px] font-bold uppercase tracking-wider text-[#0f0f0f] group" 
                     href={currentProject.link}
                   >
-                    <span className="h-5 w-5 rounded-full bg-neutral-100 p-[4px] flex items-center justify-center transition-transform group-hover:scale-110 duration-300">
-                      <span className="block h-full w-full rounded-full bg-[#9c9c55]" />
+                    <span className="h-5 w-5 rounded-full bg-[#ebe7e3] p-[4px] flex items-center justify-center transition-transform group-hover:scale-110 duration-300">
+                      <span className="block h-full w-full rounded-full bg-[#a6874c]" />
                     </span>
                     LEARN MORE
                   </a>
@@ -150,7 +150,7 @@ const Gallery = () => {
               type="button" 
               onClick={handlePrev}
               aria-label="Show previous project" 
-              className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-800 transition shadow-sm hover:bg-neutral-950 hover:text-white active:scale-95"
+              className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full border border-[#c6c5c1] bg-white text-[#2b2b2b] transition shadow-sm hover:bg-[#0f0f0f] hover:text-white active:scale-95"
             >
               <ArrowLeft size={22} strokeWidth={1.5} />
             </button>
@@ -159,7 +159,7 @@ const Gallery = () => {
               type="button" 
               onClick={handleNext}
               aria-label="Show next project" 
-              className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-800 transition shadow-sm hover:bg-neutral-950 hover:text-white active:scale-95"
+              className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full border border-[#c6c5c1] bg-white text-[#2b2b2b] transition shadow-sm hover:bg-[#0f0f0f] hover:text-white active:scale-95"
             >
               <ArrowRight size={22} strokeWidth={1.5} />
             </button>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const testimonialsData = [
   {
@@ -39,7 +39,7 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section className="w-full bg-[#111111] text-white overflow-hidden">
+    <section className="w-full bg-[#0f0f0f] text-white overflow-hidden">
       <div className="w-full grid grid-cols-1 lg:grid-cols-2">
         
         {/* Left Side: Testimonial Image Banner */}
@@ -52,7 +52,7 @@ const TestimonialSection = () => {
         </div>
 
         {/* Right Side: Content Wrapper */}
-        <div className="flex flex-col justify-center items-center text-center px-6 py-12 md:px-12 lg:px-20 bg-[#111111]">
+        <div className="flex flex-col justify-center items-center text-center px-6 py-12 md:px-12 lg:px-20 bg-[#0f0f0f]">
           
           <h2 className="text-3xl md:text-4xl font-semibold tracking-wide mb-8">
             Client feedbacks
@@ -72,7 +72,7 @@ const TestimonialSection = () => {
               {[...Array(5)].map((_, i) => (
                 <svg 
                   key={i} 
-                  className="w-4 h-4 text-[#B62025] dark:text-[#FF4B4B] fill-current" 
+                  className="w-4 h-4 text-[#a6874c] fill-current" 
                   viewBox="0 0 24 24"
                 >
                   <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
@@ -81,7 +81,7 @@ const TestimonialSection = () => {
             </div>
 
             {/* Content Text */}
-            <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6 max-w-lg px-2">
+            <p className="text-[#c5c5c1] text-sm md:text-base leading-relaxed mb-6 max-w-lg px-2">
               {testimonialsData[currentIndex].content}
             </p>
 
@@ -95,7 +95,7 @@ const TestimonialSection = () => {
           <div className="flex items-center space-x-3">
             <button 
               onClick={handlePrev}
-              className="w-10 h-10 flex items-center justify-center bg-[#B62025] dark:bg-[#FF4B4B] text-white transition-opacity hover:opacity-90 cursor-pointer"
+              className="w-10 h-10 flex items-center justify-center bg-[#a6874c] text-white transition-opacity hover:bg-[#917342] cursor-pointer"
               aria-label="Previous slide"
             >
               <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
@@ -104,7 +104,7 @@ const TestimonialSection = () => {
             </button>
             <button 
               onClick={handleNext}
-              className="w-10 h-10 flex items-center justify-center bg-[#B62025] dark:bg-[#FF4B4B] text-white transition-opacity hover:opacity-90 cursor-pointer"
+              className="w-10 h-10 flex items-center justify-center bg-[#a6874c] text-white transition-opacity hover:bg-[#917342] cursor-pointer"
               aria-label="Next slide"
             >
               <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">

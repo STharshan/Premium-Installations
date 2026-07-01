@@ -1,4 +1,3 @@
-import React from 'react'
 import { ArrowUpRight, Building2, Users } from 'lucide-react'
 
 function HardHatOutline() {
@@ -27,17 +26,17 @@ function ConstructionBadge() {
   return (
     <div className="absolute -bottom-12 left-1/2 z-10 flex -translate-x-1/2 rotate-[-10deg] flex-col items-center">
       <div className="relative">
-        <div className="absolute left-1/2 top-10 h-14 w-16 -translate-x-1/2 rounded-b-[1.8rem] bg-[linear-gradient(180deg,#d86f00_0%,#a94a00_100%)] opacity-85" />
-        <div className="relative h-20 w-28 rounded-t-full rounded-b-xl border-[5px] border-[#d39a08] bg-[linear-gradient(180deg,#ffd94f_0%,#f5ae00_100%)] shadow-[0_18px_35px_rgba(245,174,0,0.28)]">
-          <div className="absolute left-1/2 top-4 h-8 w-[72px] -translate-x-1/2 rounded-t-full border-[4px] border-[#f8cb31] border-b-0" />
-          <div className="absolute left-[18px] right-[18px] top-[42px] h-[5px] rounded-full bg-[#c88700]" />
+        <div className="absolute left-1/2 top-10 h-14 w-16 -translate-x-1/2 rounded-b-[1.8rem] bg-[linear-gradient(180deg,#2b2b2b_0%,#0f0f0f_100%)] opacity-90" />
+        <div className="relative h-20 w-28 rounded-t-full rounded-b-xl border-[5px] border-[#c6c5c1] bg-[linear-gradient(180deg,#ebe7e3_0%,#c6c5c1_100%)] shadow-[0_18px_35px_rgba(15,15,15,0.14)]">
+          <div className="absolute left-1/2 top-4 h-8 w-[72px] -translate-x-1/2 rounded-t-full border-[4px] border-[#fafaf8] border-b-0" />
+          <div className="absolute left-[18px] right-[18px] top-[42px] h-[5px] rounded-full bg-[#8a8a8a]" />
         </div>
       </div>
-      <div className="relative -mt-1 rounded-md border-[3px] border-[#3b2a00] bg-[#ffd52a] px-3 py-1 shadow-[0_10px_18px_rgba(0,0,0,0.15)]">
-        <span className="block text-[10px] font-black uppercase tracking-[0.12em] text-[#141414] sm:text-xs">
+      <div className="relative -mt-1 rounded-md border-[3px] border-[#2b2b2b] bg-[#a6874c] px-3 py-1 shadow-[0_10px_18px_rgba(15,15,15,0.15)]">
+        <span className="block text-[10px] font-black uppercase tracking-[0.12em] text-white sm:text-xs">
           Under
         </span>
-        <span className="block text-sm font-black uppercase tracking-[0.08em] text-[#141414] sm:text-base">
+        <span className="block text-sm font-black uppercase tracking-[0.08em] text-white sm:text-base">
           Construction
         </span>
       </div>
@@ -51,7 +50,7 @@ const stats = [
     value: '85',
     suffix: '+',
     caption: 'Offices Worldwide',
-    cardClass: 'bg-[#181818] text-white',
+    cardClass: 'bg-[#2b2b2b] text-white',
     Icon: Building2,
   },
   {
@@ -59,27 +58,27 @@ const stats = [
     value: '1500',
     suffix: '+',
     caption: 'Employees',
-    cardClass: 'bg-[#f47b08] text-white',
+    cardClass: 'bg-[#a6874c] text-white',
     Icon: Users,
   },
 ]
 
 const WhoWeAre = () => {
   return (
-    <section className="overflow-hidden bg-[#f7f4ee] px-5 py-20 text-[#111111] sm:px-8 lg:px-14 xl:px-20">
+    <section className="overflow-hidden bg-[#fafaf8] px-5 py-20 text-[#111111] sm:px-8 lg:px-14 xl:px-20">
       <div className="mx-auto max-w-[1440px]">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[190px_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[205px_minmax(0,1fr)]">
           <div className="pt-3">
             <div className="flex items-center gap-3">
-              <span className="h-px w-8 bg-[#d08b35]" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#d08b35]">
+              <span className="h-px w-8 bg-[#a6874c]" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#a6874c]">
                 Who We Are
               </span>
             </div>
           </div>
 
           <div className="space-y-10">
-            <h2 className="max-w-[860px] text-4xl font-black leading-[1.08] tracking-[-0.04em] text-[#101010] sm:text-5xl lg:text-[4rem]">
+            <h2 className="max-w-[860px] text-4xl font-black leading-[1.08] tracking-[-0.04em] text-[#0f0f0f] sm:text-5xl lg:text-[4rem]">
               The Largest Privately Held Real Estate Investors And Managers In The World
             </h2>
 
@@ -98,10 +97,10 @@ const WhoWeAre = () => {
 
                 <button
                   type="button"
-                  className="group inline-flex items-center gap-4 rounded-full bg-[#f47b08] px-6 py-3 text-[11px] font-extrabold uppercase tracking-[0.14em] text-white shadow-[0_16px_28px_rgba(244,123,8,0.25)] transition hover:translate-y-[-2px]"
+                  className="group inline-flex items-center gap-4 rounded-full bg-[#a6874c] px-6 py-3 text-[11px] font-extrabold uppercase tracking-[0.14em] text-white shadow-[0_16px_28px_rgba(166,135,76,0.25)] transition hover:translate-y-[-2px]"
                 >
                   Learn More
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#171717] transition-transform duration-300 group-hover:rotate-45">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#0f0f0f] transition-transform duration-300 group-hover:rotate-45">
                     <ArrowUpRight size={16} strokeWidth={2.4} />
                   </span>
                 </button>
@@ -118,19 +117,19 @@ const WhoWeAre = () => {
               <div className="relative flex h-full flex-col justify-between gap-8 pt-2">
                 <div className="space-y-8">
                   <div>
-                    <h3 className="text-[1.75rem] font-black tracking-[-0.03em] text-[#111111] sm:text-[2rem] lg:text-[1.95rem]">
+                    <h3 className="text-[1.75rem] font-black tracking-[-0.03em] text-[#0f0f0f] sm:text-[2rem] lg:text-[1.95rem]">
                       Our Vision
                     </h3>
-                    <p className="mt-3 text-[15px] leading-7 text-[#77716b]">
+                    <p className="mt-3 text-[15px] leading-7 text-[#545454]">
                       To empower businesses with cutting-edge web solutions that enhance their digital presence and drive growth.
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="text-[1.75rem] font-black tracking-[-0.03em] text-[#111111] sm:text-[2rem] lg:text-[1.95rem]">
+                    <h3 className="text-[1.75rem] font-black tracking-[-0.03em] text-[#0f0f0f] sm:text-[2rem] lg:text-[1.95rem]">
                       Our Mission
                     </h3>
-                    <p className="mt-3 text-[15px] leading-7 text-[#77716b]">
+                    <p className="mt-3 text-[15px] leading-7 text-[#545454]">
                       Our solutions are designed to meet the needs of modern enterprises, ensuring they thrive in today&apos;s competitive online landscape.
                     </p>
                   </div>
@@ -161,7 +160,7 @@ const WhoWeAre = () => {
                   ))}
                 </div>
 
-                <div className="pointer-events-none absolute -bottom-3 right-[-18px] hidden w-[170px] text-[#d9d4cd] lg:block">
+                <div className="pointer-events-none absolute -bottom-3 right-[-18px] hidden w-[170px] text-[#c5c5c1] lg:block">
                   <HardHatOutline />
                 </div>
               </div>

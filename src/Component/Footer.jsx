@@ -1,4 +1,3 @@
-import React from 'react'
 
 const footerLinks = [
   ['Solutions', 'Pricing', 'Meet Our Team', 'Blog', 'HR Guides'],
@@ -42,8 +41,8 @@ function InstagramIcon() {
 
 function BrandMark() {
   return (
-    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-500/90 shadow-lg shadow-orange-500/25">
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-7 w-7 fill-white">
+    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#2b2b2b] shadow-lg shadow-black/10">
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-7 w-7 fill-[#fafaf8]">
         <path d="M4 18.5 10.8 5.5l4.1 7.6 2.4-3.4L20 18.5H4Z" />
       </svg>
     </div>
@@ -53,12 +52,7 @@ function BrandMark() {
 export default function Footer() {
   return (
     <footer className="px-3 pb-10 pt-6 sm:px-6 lg:px-8" style={{ backgroundColor: footerSurface }}>
-      {/* Absolute positioning relative anchor context wrapper */}
       <div className="relative mx-auto max-w-[96rem]">
-
-        {/* ========================================== */}
-        {/* TOP LEFT CUTOUT COMPOSITE                  */}
-        {/* ========================================== */}
         <div
           className="absolute left-0 top-0 z-20 hidden h-16 w-44 rounded-br-3xl md:block lg:w-52"
           style={{ backgroundColor: footerSurface }}
@@ -67,9 +61,6 @@ export default function Footer() {
           <div className="absolute top-0 -right-6 h-6 w-6 rounded-tl-3xl" style={{ boxShadow: `-6px -6px 0 0 ${footerSurface}` }} />
         </div>
 
-        {/* ========================================== */}
-        {/* TOP RIGHT CUTOUT COMPOSITE                 */}
-        {/* ========================================== */}
         <div
           className="absolute right-0 top-0 z-20 hidden h-16 w-44 rounded-bl-3xl md:block lg:w-52"
           style={{ backgroundColor: footerSurface }}
@@ -78,24 +69,19 @@ export default function Footer() {
           <div className="absolute top-0 -left-6 h-6 w-6 rounded-tr-3xl" style={{ boxShadow: `6px -6px 0 0 ${footerSurface}` }} />
         </div>
 
-        {/* Main Dark Footer Wrapper */}
-        <div className="relative overflow-hidden rounded-[2rem] bg-[#07090d] text-white shadow-[0_30px_100px_rgba(0,0,0,0.28)]">
-          {/* Background Gradients & Accents */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(249,115,22,0.16),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_34%),linear-gradient(180deg,#12151b_0%,#07090d_100%)]" />
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#0f0f0f] text-[#fafaf8] shadow-[0_30px_100px_rgba(15,15,15,0.28)]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(166,135,76,0.14),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_34%),linear-gradient(180deg,#2b2b2b_0%,#0f0f0f_100%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.03)_0,rgba(255,255,255,0)_22%),linear-gradient(315deg,rgba(255,255,255,0.03)_0,rgba(255,255,255,0)_20%)]" />
-          <div className="absolute inset-y-0 left-0 w-1/2 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_60%)] blur-3xl" />
+          <div className="absolute inset-y-0 left-0 w-1/2 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.04),transparent_60%)] blur-3xl" />
           <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.55))]" />
 
-          {/* Core Content Area */}
           <div className="relative px-5 pb-6 pt-16 sm:px-8 sm:pt-20 lg:px-12 lg:pt-24 xl:px-16">
-
-            {/* Newsletter Subscription Row */}
             <div className="flex flex-col gap-6 px-3 py-5 sm:px-4 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:px-6">
               <div className="max-w-xl">
                 <h2 className="text-2xl font-semibold tracking-tight sm:text-4xl">
                   Subscribe Newsletter
                 </h2>
-                <p className="mt-2 max-w-xl text-sm text-white/65 sm:text-base">
+                <p className="mt-2 max-w-xl text-sm text-[#c5c5c1] sm:text-base">
                   Sign up today to get the latest inspiration and insights.
                 </p>
               </div>
@@ -104,19 +90,19 @@ export default function Footer() {
                 <label htmlFor="newsletter-email" className="sr-only">
                   Email address
                 </label>
-                <div className="flex flex-col gap-3 rounded-[2rem] bg-white p-2 shadow-[0_10px_30px_rgba(0,0,0,0.2)] sm:flex-row sm:items-center sm:rounded-full">
+                <div className="flex flex-col gap-3 rounded-[2rem] bg-[#fafaf8] p-2 shadow-[0_10px_30px_rgba(15,15,15,0.16)] sm:flex-row sm:items-center sm:rounded-full">
                   <input
                     id="newsletter-email"
                     type="email"
                     placeholder="Enter Your Email Address..."
-                    className="min-w-0 flex-1 rounded-full border-0 bg-transparent px-5 py-3 text-sm text-slate-900 outline-none placeholder:text-slate-400 sm:px-6"
+                    className="min-w-0 flex-1 rounded-full border-0 bg-transparent px-5 py-3 text-sm text-[#0f0f0f] outline-none placeholder:text-[#8a8a8a] sm:px-6"
                   />
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-orange-500 px-5 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange-400 sm:px-6"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[#a6874c] px-5 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-[#917342] sm:px-6"
                   >
                     Subscribe
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black/80 text-[11px]">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0f0f0f] text-[11px]">
                       Go
                     </span>
                   </button>
@@ -124,52 +110,51 @@ export default function Footer() {
               </form>
             </div>
 
-            {/* Middle Layout Blocks */}
             <div className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_1.9fr] lg:gap-14">
               <div className="max-w-md">
                 <div className="flex items-center gap-3">
                   <BrandMark />
                   <div>
                     <div className="text-2xl font-semibold tracking-tight">Constrc</div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-white/45">
+                    <p className="text-xs uppercase tracking-[0.3em] text-[#8a8a8a]">
                       Construction Studio
                     </p>
                   </div>
                 </div>
 
-                <p className="mt-5 max-w-sm text-sm leading-6 text-white/65">
+                <p className="mt-5 max-w-sm text-sm leading-6 text-[#c5c5c1]">
                   For clients, our employees, and our community, through our commitment to leadership,
                   excellence in craft, and attention to detail.
                 </p>
 
                 <div className="mt-6 flex items-center gap-3">
-                  <span className="text-sm font-medium text-white/85">Follow Us:</span>
+                  <span className="text-sm font-medium text-[#fafaf8]">Follow Us:</span>
                   <div className="flex items-center gap-2">
                     <a
                       href="#"
                       aria-label="Facebook"
-                      className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-orange-500"
+                      className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#fafaf8] transition hover:bg-[#a6874c]"
                     >
                       <FacebookIcon />
                     </a>
                     <a
                       href="#"
                       aria-label="X"
-                      className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-orange-500"
+                      className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#fafaf8] transition hover:bg-[#a6874c]"
                     >
                       <XIcon />
                     </a>
                     <a
                       href="#"
                       aria-label="YouTube"
-                      className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-orange-500"
+                      className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#fafaf8] transition hover:bg-[#a6874c]"
                     >
                       <YoutubeIcon />
                     </a>
                     <a
                       href="#"
                       aria-label="Instagram"
-                      className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-orange-500"
+                      className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#fafaf8] transition hover:bg-[#a6874c]"
                     >
                       <InstagramIcon />
                     </a>
@@ -177,7 +162,6 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* Dynamic Footer Hyperlinks */}
               <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
                 {footerLinks.map((group, index) => (
                   <ul key={index} className="space-y-3">
@@ -185,9 +169,9 @@ export default function Footer() {
                       <li key={item}>
                         <a
                           href="#"
-                          className="inline-flex items-center gap-2 text-sm transition hover:text-orange-400 text-white/78"
+                          className="inline-flex items-center gap-2 text-sm text-[#fafaf8]/78 transition hover:text-[#a6874c]"
                         >
-                          <span className="text-[10px] text-white/40">•</span>
+                          <span className="text-[10px] text-[#8a8a8a]">•</span>
                           {item}
                         </a>
                       </li>
@@ -197,8 +181,7 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Bottom Copyright Strip */}
-            <div className="relative mt-10 overflow-hidden rounded-full bg-white/8 px-4 py-3 text-xs text-white/70 ring-1 ring-white/8 sm:px-6">
+            <div className="relative mt-10 overflow-hidden rounded-full bg-white/8 px-4 py-3 text-xs text-[#c5c5c1] ring-1 ring-white/8 sm:px-6">
               <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <p>Copyright 2026 - All Rights Reserved By expert-themes</p>
                 <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
@@ -212,7 +195,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Giant Graphic Text */}
             <div className="pointer-events-none absolute bottom-10 left-1/2 -z-0 hidden -translate-x-1/2 select-none text-[clamp(4rem,18vw,12rem)] font-black leading-none tracking-tight text-white/5 lg:block">
               constrc
             </div>

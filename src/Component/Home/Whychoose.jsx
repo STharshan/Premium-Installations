@@ -1,4 +1,3 @@
-import React from 'react';
 import { 
   ShieldCheck, 
   GitCommit, 
@@ -79,18 +78,18 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="w-full bg-white text-black py-24 px-6 sm:px-12 lg:px-20 font-sans">
+    <section className="w-full bg-[#fafaf8] text-[#0f0f0f] py-24 px-6 sm:px-12 lg:px-20 font-sans">
       <div className="max-w-[1440px] mx-auto space-y-16">
         
         {/* Section Header */}
         <div className="text-center space-y-3">
-          <span className="text-xs uppercase tracking-widest text-neutral-500 font-bold block">
+          <span className="text-xs uppercase tracking-widest text-[#8a8a8a] font-bold block">
             Right Choice
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-neutral-900">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-[#0f0f0f]">
             Why Choose Builtline
           </h2>
-          <p className="text-neutral-600 text-sm sm:text-base max-w-xl mx-auto font-light">
+          <p className="text-[#545454] text-sm sm:text-base max-w-xl mx-auto font-light">
             Where innovation meets strong and reliable construction.
           </p>
         </div>
@@ -109,22 +108,22 @@ const WhyChooseUs = () => {
                 <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   
                   {/* FRONT PANEL: Clean State */}
-                  <div className="absolute inset-0 bg-white border border-neutral-200 rounded-2xl p-6 flex flex-col items-center justify-center text-center [backface-visibility:hidden] space-y-4 shadow-sm group-hover:border-neutral-300 transition-colors">
-                    <div className="p-4 bg-neutral-50 rounded-xl text-neutral-800 transition-colors duration-300">
+                  <div className="absolute inset-0 bg-white border border-[#c6c5c1] rounded-2xl p-6 flex flex-col items-center justify-center text-center [backface-visibility:hidden] space-y-4 shadow-sm group-hover:border-[#8a8a8a] transition-colors">
+                    <div className="p-4 bg-[#ebe7e3] rounded-xl text-[#2b2b2b] transition-colors duration-300">
                       <IconComponent size={40} strokeWidth={1.25} />
                     </div>
-                    <h3 className="font-bold text-base tracking-wide max-w-[90%] leading-snug text-neutral-900 uppercase">
+                    <h3 className="font-bold text-base tracking-wide max-w-[90%] leading-snug text-[#0f0f0f] uppercase">
                       {item.title}
                     </h3>
                   </div>
 
                   {/* BACK PANEL: Content Reveal on Flip */}
-                  <div className="absolute inset-0 bg-neutral-950 border border-neutral-800 rounded-2xl p-6 flex flex-col items-center justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden] shadow-2xl z-20">
-                    <p className="text-xs sm:text-[13px] text-neutral-300 leading-relaxed font-normal px-2">
+                  <div className="absolute inset-0 bg-[#0f0f0f] border border-[#2b2b2b] rounded-2xl p-6 flex flex-col items-center justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden] shadow-2xl z-20">
+                    <p className="text-xs sm:text-[13px] text-[#c5c5c1] leading-relaxed font-normal px-2">
                       {item.desc}
                     </p>
                     {/* Minimal Core Accent Divider Line */}
-                    <div className="absolute bottom-5 h-[3px] w-8 bg-neutral-700 rounded-full" />
+                    <div className="absolute bottom-5 h-[3px] w-8 bg-[#a6874c] rounded-full" />
                   </div>
 
                 </div>

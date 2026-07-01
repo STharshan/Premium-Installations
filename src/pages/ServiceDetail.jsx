@@ -4,7 +4,7 @@ import TestimonialSection from '../Component/SingleService/TestimonialSection';
 
 const ServiceDetail = () => {
   return (
-    <main className="bg-white">
+    <main className="bg-[#fafaf8]">
       <Hero />
       <ServiceDetailContent />
       <TestimonialSection />

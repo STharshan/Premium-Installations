@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ArrowUpRight, ChevronDown, Clock3, Mail, MapPin, Phone, Play } from 'lucide-react';
 
 const contactItems = [
@@ -24,10 +24,10 @@ export default function ContactSection() {
 
   // Exact gray/white inputs as per reference image_d0493c.jpg
   const inputBaseClass =
-    'h-[56px] w-full rounded-full border border-[#f0f0f0] bg-[#f7f7f7] px-5 text-[13px] text-[#121212] outline-none transition placeholder:text-[#999999] focus:border-[#ff8300] focus:bg-white';
+    'h-[56px] w-full rounded-full border border-[#c6c5c1] bg-[#ebe7e3] px-5 text-[13px] text-[#0f0f0f] outline-none transition placeholder:text-[#8a8a8a] focus:border-[#a6874c] focus:bg-white';
 
   return (
-    <section className="overflow-hidden bg-white px-4 py-14 font-sans text-[#111111] sm:px-8 lg:px-12 lg:py-20">
+    <section className="overflow-hidden bg-[#fafaf8] px-4 py-14 font-sans text-[#111111] sm:px-8 lg:px-12 lg:py-20">
       <div className="mx-auto max-w-[1240px] relative">
         
         {/* UPPER CONTENT LAYOUT */}
@@ -37,12 +37,12 @@ export default function ContactSection() {
           <div className="space-y-10 pb-4 lg:col-span-5 lg:pt-4">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <span className="h-px w-8 bg-[#dfcfb4]" />
-                <span className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#d38a38]">
+                <span className="h-px w-8 bg-[#c6c5c1]" />
+                <span className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#a6874c]">
                   Contact Us
                 </span>
               </div>
-              <h2 className="max-w-[440px] text-[2.7rem] font-black leading-[0.96] tracking-[-0.055em] text-[#090909] sm:text-[3.3rem] lg:text-[4.1rem]">
+              <h2 className="max-w-[440px] text-[2.7rem] font-black leading-[0.96] tracking-[-0.055em] text-[#0f0f0f] sm:text-[3.3rem] lg:text-[4.1rem]">
                 Let&apos;s Work Together
               </h2>
             </div>
@@ -50,14 +50,14 @@ export default function ContactSection() {
             <div className="grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-2">
               {contactItems.map(({ title, value, Icon }) => (
                 <div key={title} className="flex items-start gap-4">
-                  <div className="flex h-[54px] w-[54px] shrink-0 items-center justify-center rounded-full bg-[#ff8300] text-white shadow-[0_12px_24px_rgba(255,131,0,0.2)]">
+                  <div className="flex h-[54px] w-[54px] shrink-0 items-center justify-center rounded-full bg-[#a6874c] text-white shadow-[0_12px_24px_rgba(166,135,76,0.2)]">
                     <Icon size={17} strokeWidth={2.2} />
                   </div>
                   <div className="space-y-1 pt-1">
-                    <h3 className="text-[1rem] font-black leading-none tracking-[-0.03em] text-[#101010]">
+                    <h3 className="text-[1rem] font-black leading-none tracking-[-0.03em] text-[#0f0f0f]">
                       {title}
                     </h3>
-                    <p className="text-[12.5px] text-[#8c847a] leading-tight pt-0.5">{value}</p>
+                    <p className="text-[12.5px] text-[#545454] leading-tight pt-0.5">{value}</p>
                   </div>
                 </div>
               ))}
@@ -66,7 +66,7 @@ export default function ContactSection() {
 
           {/* Right Side Form Panel */}
           <div className="bg-white p-2 lg:col-span-7 lg:pl-6">
-            <p className="mb-6 max-w-[540px] text-[14px] leading-relaxed text-[#46413b]">
+            <p className="mb-6 max-w-[540px] text-[14px] leading-relaxed text-[#545454]">
               We&apos;d love to share more with you, please complete this form and our dedicated team will get back to you shortly.
             </p>
 
@@ -83,7 +83,7 @@ export default function ContactSection() {
                     name="inquiry"
                     value={formData.inquiry}
                     onChange={handleChange}
-                    className={`${inputBaseClass} appearance-none pr-12 text-[#8d877d]`}
+                    className={`${inputBaseClass} appearance-none pr-12 text-[#8a8a8a]`}
                   >
                     <option value="">Your inquiry about</option>
                     <option value="residential">Residential Construction</option>
@@ -91,7 +91,7 @@ export default function ContactSection() {
                     <option value="architecture">Architecture Design</option>
                     <option value="renovation">Renovation Planning</option>
                   </select>
-                  <span className="pointer-events-none absolute inset-y-0 right-5 flex items-center text-[#8d877d]">
+                  <span className="pointer-events-none absolute inset-y-0 right-5 flex items-center text-[#8a8a8a]">
                     <ChevronDown size={18} />
                   </span>
                 </div>
@@ -103,18 +103,18 @@ export default function ContactSection() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Your Message"
-                className="min-h-[128px] w-full rounded-[24px] border border-[#f0f0f0] bg-[#f7f7f7] px-5 py-4 text-[13px] text-[#121212] outline-none transition placeholder:text-[#999999] focus:border-[#ff8300] focus:bg-white"
+                className="min-h-[128px] w-full rounded-[24px] border border-[#c6c5c1] bg-[#ebe7e3] px-5 py-4 text-[13px] text-[#0f0f0f] outline-none transition placeholder:text-[#8a8a8a] focus:border-[#a6874c] focus:bg-white"
               />
 
               <div className="flex flex-col gap-5 pt-2 sm:flex-row sm:items-center sm:justify-between">
-                <div className="text-[12px] text-[#7a746d] leading-tight">
+                <div className="text-[12px] text-[#545454] leading-tight">
                   <p>We&apos;re excited to connect with you!</p>
                   <p>Required fields are marked *</p>
                 </div>
 
-                <button type="submit" className="group inline-flex h-[54px] items-center justify-between rounded-full bg-[#ff8300] p-1 pl-6 text-left shadow-[0_12px_24px_rgba(255,131,0,0.2)] transition min-w-[200px]">
+                <button type="submit" className="group inline-flex h-[54px] items-center justify-between rounded-full bg-[#a6874c] p-1 pl-6 text-left shadow-[0_12px_24px_rgba(166,135,76,0.2)] transition min-w-[200px]">
                   <span className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-white">Contact Now</span>
-                  <span className="flex h-[46px] w-[46px] items-center justify-center rounded-full bg-[#121212] text-white">
+                  <span className="flex h-[46px] w-[46px] items-center justify-center rounded-full bg-[#0f0f0f] text-white">
                     <ArrowUpRight size={16} strokeWidth={2.5} />
                   </span>
                 </button>
@@ -154,13 +154,13 @@ export default function ContactSection() {
               alt="Modern construction architectural showcase layout"
               className="h-[320px] w-full object-cover sm:h-[430px] lg:h-[560px]"
             />
-            <div className="absolute inset-0 bg-neutral-950/5" />
+            <div className="absolute inset-0 bg-[#0f0f0f]/5" />
 
             {/* Video Play Component Trigger */}
             <div className="absolute bottom-6 right-6 z-40 sm:bottom-10 sm:right-10">
               <button
                 type="button"
-                className="flex h-[84px] w-[84px] items-center justify-center rounded-full border-[4px] border-[#ff8300] bg-[#090909] text-white shadow-2xl transition duration-300 hover:scale-105 sm:h-[96px] sm:w-[96px]"
+                className="flex h-[84px] w-[84px] items-center justify-center rounded-full border-[4px] border-[#a6874c] bg-[#0f0f0f] text-white shadow-2xl transition duration-300 hover:scale-105 sm:h-[96px] sm:w-[96px]"
               >
                 <Play size={26} className="translate-x-0.5 fill-white" />
               </button>

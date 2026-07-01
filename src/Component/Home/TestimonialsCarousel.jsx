@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const TestimonialsCarousel = () => {
@@ -58,17 +58,17 @@ const TestimonialsCarousel = () => {
   ];
 
   return (
-    <section className="w-full bg-[#f8f9fa] py-24 px-6 sm:px-12 lg:px-20 font-sans overflow-hidden">
+    <section className="w-full bg-[#ebe7e3] py-24 px-6 sm:px-12 lg:px-20 font-sans overflow-hidden">
       <div className="max-w-[1440px] mx-auto space-y-12">
         
         {/* Header Layout directly matching image_8ff622.jpg */}
         <div className="space-y-2 max-w-2xl">
-          <span className="text-xs font-bold uppercase tracking-widest text-neutral-400 block">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#8a8a8a] block">
             Testimonials
           </span>
-          <h2 className="text-4xl sm:text-5xl font-normal tracking-tight text-neutral-900 leading-[1.1]">
+          <h2 className="text-4xl sm:text-5xl font-normal tracking-tight text-[#0f0f0f] leading-[1.1]">
             Don't take our word for it!<br />
-            <span className="text-neutral-800">Hear it from our partners.</span>
+            <span className="text-[#2b2b2b]">Hear it from our partners.</span>
           </h2>
         </div>
 
@@ -95,7 +95,7 @@ const TestimonialsCarousel = () => {
                       setIsPaused(false);
                       setHoveredCard(null);
                     }}
-                    className="relative h-[480px] w-full rounded-3xl p-8 flex flex-col justify-between transition-all duration-500 overflow-hidden shadow-sm border border-neutral-100 cursor-pointer bg-white"
+                    className="relative h-[480px] w-full rounded-3xl p-8 flex flex-col justify-between transition-all duration-500 overflow-hidden shadow-sm border border-[#c6c5c1] cursor-pointer bg-white"
                   >
                     {/* Background Dynamic Image Transition Layer */}
                     <div 
@@ -118,7 +118,7 @@ const TestimonialsCarousel = () => {
                         src={item.avatar} 
                         alt={item.name} 
                         className={`w-12 h-12 rounded-full object-cover border-2 transition-colors duration-300 ${
-                          isHovered ? 'border-white/80' : 'border-neutral-900'
+                          isHovered ? 'border-white/80' : 'border-[#0f0f0f]'
                         }`}
                       />
                       
@@ -139,7 +139,7 @@ const TestimonialsCarousel = () => {
                     {/* CENTER: Description Quote Block */}
                     <div className="relative z-20 mt-6 flex-grow">
                       <p className={`text-sm sm:text-base leading-relaxed transition-colors duration-300 line-clamp-6 ${
-                        isHovered ? 'text-white/90 font-light' : 'text-neutral-700 font-normal'
+                        isHovered ? 'text-white/90 font-light' : 'text-[#545454] font-normal'
                       }`}>
                         {item.quote}
                       </p>
@@ -149,14 +149,14 @@ const TestimonialsCarousel = () => {
                     <div className="relative z-20 pt-4 border-t border-transparent">
                       <h4 
                         className={`text-xl font-serif tracking-wide transition-colors duration-300 ${
-                          isHovered ? 'text-white' : 'text-neutral-900'
+                          isHovered ? 'text-white' : 'text-[#0f0f0f]'
                         }`}
                         style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}
                       >
                         {item.name}
                       </h4>
                       <p className={`text-xs mt-1 transition-colors duration-300 ${
-                        isHovered ? 'text-white/70' : 'text-neutral-400'
+                        isHovered ? 'text-white/70' : 'text-[#8a8a8a]'
                       }`}>
                         {item.role}
                       </p>

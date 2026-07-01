@@ -3,7 +3,7 @@ import HomeContactSection from '../Component/Home/ContactSection';
 
 const Services = () => {
   return (
-    <main className="bg-white">
+    <main className="bg-[#fafaf8]">
       <ServiceShowcase />
       <HomeContactSection />
     </main>
