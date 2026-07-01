@@ -68,7 +68,7 @@ Message: ${formData.message}`;
                   <span className="text-[15px] font-medium tracking-[-0.02em]">Schedule A Visit</span>
                 </div>
 
-                <h2 className="mt-8 max-w-[720px] text-[42px] font-medium leading-[1.08] tracking-[-0.045em] text-[#0f0f0f] sm:text-[54px] lg:mt-10 lg:text-[68px] xl:text-[66px] 2xl:text-[72px]">
+                <h1 className="mt-8 max-w-[720px] text-[42px] font-medium leading-[1.08] tracking-[-0.045em] text-[#0f0f0f] sm:text-[54px] lg:mt-10 lg:text-[68px] xl:text-[66px] 2xl:text-[72px]">
                   {headingWords.map((word, i) => (
                     <span key={i} className="mr-[12px] mb-[6px] inline-block overflow-hidden">
                       <span className="inline-block animate-textReveal" style={{ animationDelay: `${i * 0.07}s` }}>
@@ -76,7 +76,7 @@ Message: ${formData.message}`;
                       </span>
                     </span>
                   ))}
-                </h2>
+                </h1>
 
                 <p
                   className="mt-8 max-w-[650px] text-[17px] leading-[1.9] text-[#545454] opacity-0 animate-fadeUp sm:text-[18px]"
@@ -103,7 +103,7 @@ Message: ${formData.message}`;
                   </div>
                 </div>
                 <div className="mt-8 border-t border-[#c6c5c1] pt-7">
-                  <h3 className="text-[24px] font-medium tracking-[-0.03em] text-[#0f0f0f]">Units Delivered</h3>
+                  <h2 className="text-[24px] font-medium tracking-[-0.03em] text-[#0f0f0f]">Units Delivered</h2>
                   <p className="mt-4 text-[17px] leading-[1.85] text-[#545454]">
                     Successfully completed homes providing comfort.
                   </p>
@@ -115,9 +115,9 @@ Message: ${formData.message}`;
               <div className="relative w-full rounded-[32px] border border-[#c6c5c1] bg-[#ebe7e3]/90 px-6 py-8 shadow-[0_24px_60px_rgba(15,15,15,0.08)] backdrop-blur-[2px] sm:px-8 sm:py-10 lg:px-8 xl:min-h-[720px] xl:px-8 xl:py-12 2xl:px-10">
                 <div className="pointer-events-none absolute right-5 top-5 h-32 w-32 rounded-full bg-[radial-gradient(circle,_rgba(255,255,255,0.28)_0%,_rgba(255,255,255,0)_72%)]" />
 
-                <h3 className="text-[32px] font-medium tracking-[-0.04em] text-[#0f0f0f] sm:text-[36px]">
+                <h2 className="text-[32px] font-medium tracking-[-0.04em] text-[#0f0f0f] sm:text-[36px]">
                   Contact Us
-                </h3>
+                </h2>
                 <div className="mt-6 border-t border-[#c6c5c1]" />
 
                 <form onSubmit={handleSubmit} className="mt-8 space-y-6 sm:space-y-7">

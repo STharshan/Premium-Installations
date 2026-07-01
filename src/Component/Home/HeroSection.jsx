@@ -71,9 +71,9 @@ export default function HeroSection() {
 
           <div className="mt-10 grid gap-6 lg:grid-cols-12 lg:gap-10">
             <div className="lg:col-span-5 lg:col-start-1 lg:pt-6">
-              <h2 className="max-w-lg text-4xl font-medium tracking-tight text-[#0f0f0f] sm:text-5xl lg:text-[4.4rem] lg:leading-[0.95]">
+              <p className="max-w-lg text-4xl font-medium tracking-tight text-[#0f0f0f] sm:text-5xl lg:text-[4.4rem] lg:leading-[0.95]">
                 Where vision meets construction
-              </h2>
+              </p>
             </div>
 
             <div className="lg:col-span-7 lg:col-start-6 lg:self-end">

@@ -57,9 +57,9 @@ export default function CaseStudyGrid() {
                       : 'opacity-20 scale-95 blur-[0.5px]'
                   }`}
                 >
-                  <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-[#0f0f0f] leading-[1.1]">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-[#0f0f0f] leading-[1.1]">
                     {study.title}
-                  </h2>
+                  </h1>
                 </Link>
               );
             })}
@@ -81,9 +81,9 @@ export default function CaseStudyGrid() {
 
               {/* Bottom Explanatory Grid Info Panel */}
               <div className="space-y-4 pt-2">
-                <h3 className="text-xl font-bold tracking-tight text-[#0f0f0f]">
+                <h2 className="text-xl font-bold tracking-tight text-[#0f0f0f]">
                   {activeStudy.title}
-                </h3>
+                </h2>
                 
                 {/* Meta details labels */}
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-semibold tracking-wider uppercase text-[#8a8a8a]">

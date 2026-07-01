@@ -78,7 +78,7 @@ export default function Footer() {
           <div className="relative px-5 pb-6 pt-16 sm:px-8 sm:pt-20 lg:px-12 lg:pt-24 xl:px-16">
             <div className="flex flex-col gap-6 px-3 py-5 sm:px-4 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:px-6">
               <div className="max-w-xl">
-                <h2 className="text-2xl font-semibold tracking-tight sm:text-4xl">
+                <h2 className="text-2xl text-[#c5c5c1]! font-semibold tracking-tight sm:text-4xl">
                   Subscribe Newsletter
                 </h2>
                 <p className="mt-2 max-w-xl text-sm text-[#c5c5c1] sm:text-base">

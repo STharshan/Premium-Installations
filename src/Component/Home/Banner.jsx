@@ -52,9 +52,9 @@ const Banner = () => {
             </div>
 
             {/* Main Title */}
-            <h1 className="text-3xl sm:text-4xl font-bold text-[#0f0f0f] mb-4 tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0f0f0f] mb-4 tracking-tight leading-tight">
               Greenview <br className="hidden sm:inline" /> Apartments
-            </h1>
+            </h2>
 
             {/* Description Text */}
             <p className="text-[#545454] text-xs sm:text-sm leading-relaxed mb-6">

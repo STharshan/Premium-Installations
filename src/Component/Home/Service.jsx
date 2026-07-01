@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { services } from '../../data/service';
 
-const Services = () => {
+const Services = ({ heroLevel = false } = {}) => {
   const defaultService = services.find((service) => service.slug === 'commercial-construction') || services[0];
   const [activeSlug, setActiveSlug] = useState(defaultService.slug);
   const activeService = services.find((service) => service.slug === activeSlug) || defaultService;
@@ -22,9 +22,15 @@ const Services = () => {
                 Awesome Services
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl font-black uppercase tracking-tight leading-[1.1] max-w-md">
-              Construction Service To Our Clients
-            </h2>
+            {heroLevel ? (
+              <h1 className="text-4xl sm:text-5xl font-black uppercase tracking-tight leading-[1.1] max-w-md">
+                Construction Service To Our Clients
+              </h1>
+            ) : (
+              <h2 className="text-4xl sm:text-5xl font-black uppercase tracking-tight leading-[1.1] max-w-md">
+                Construction Service To Our Clients
+              </h2>
+            )}
           </div>
 
           {/* Interactive Navigation Tabs List */}
@@ -105,9 +111,15 @@ const Services = () => {
                 transition={{ duration: 0.25 }}
                 className="space-y-2"
               >
-                <h3 className="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-white">
-                  {activeService.title}
-                </h3>
+                {heroLevel ? (
+                  <h2 className="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-white">
+                    {activeService.title}
+                  </h2>
+                ) : (
+                  <h3 className="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-white">
+                    {activeService.title}
+                  </h3>
+                )}
                 <p className="text-[#c5c5c1] text-sm sm:text-base leading-relaxed font-light">
                   {activeService.shortDescription}
                 </p>
