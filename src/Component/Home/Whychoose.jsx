@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { 
   ShieldCheck, 
   GitCommit, 
@@ -14,6 +15,14 @@ import {
 } from 'lucide-react';
 
 const WhyChooseUs = () => {
+  // Track which card is currently flipped on mobile/touch screens
+  const [activeCard, setActiveCard] = useState(null);
+
+  const handleCardClick = (idx) => {
+    // Toggle the card flip if tapped again, or switch to the new one
+    setActiveCard(activeCard === idx ? null : idx);
+  };
+
   const features = [
     {
       title: "No Subcontractors",
@@ -94,21 +103,27 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        {/* 12-Card Grid with Flawless 3D Flip Effect */}
+        {/* 12-Card Grid with Universal 3D Flip Support */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {features.map((item, idx) => {
             const IconComponent = item.icon;
+            const isFlipped = activeCard === idx;
             
             return (
               <div 
                 key={idx} 
                 className="group h-[260px] w-full [perspective:1000px] cursor-pointer"
+                onClick={() => handleCardClick(idx)}
               >
-                {/* 3D Transform Core Wrapper */}
-                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                {/* 3D Transform Core Wrapper with Hover (Desktop) and Click State (Mobile) */}
+                <div 
+                  className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] 
+                    lg:group-hover:[transform:rotateY(180deg)] 
+                    ${isFlipped ? '[transform:rotateY(180deg)]' : ''}`}
+                >
                   
                   {/* FRONT PANEL: Clean State */}
-                  <div className="absolute inset-0 bg-white border border-[#c6c5c1] rounded-2xl p-6 flex flex-col items-center justify-center text-center [backface-visibility:hidden] space-y-4 shadow-sm group-hover:border-[#8a8a8a] transition-colors">
+                  <div className="absolute inset-0 bg-white border border-[#c6c5c1] rounded-2xl p-6 flex flex-col items-center justify-center text-center [backface-visibility:hidden] space-y-4 shadow-sm lg:group-hover:border-[#8a8a8a] transition-colors">
                     <div className="p-4 bg-[#ebe7e3] rounded-xl text-[#2b2b2b] transition-colors duration-300">
                       <IconComponent size={40} strokeWidth={1.25} />
                     </div>
