@@ -58,7 +58,7 @@ const TestimonialsCarousel = () => {
   ];
 
   return (
-    <section className="w-full bg-[#ebe7e3] py-24 px-6 sm:px-12 lg:px-20 font-sans overflow-hidden">
+    <section className="w-full bg-[#fafaf8] py-24 px-6 sm:px-12 lg:px-20 font-sans overflow-hidden">
       <div className="max-w-[1440px] mx-auto space-y-12">
         
         {/* Header Layout directly matching image_8ff622.jpg */}
@@ -107,7 +107,7 @@ const TestimonialsCarousel = () => {
 
                     {/* Dark Tint overlay for media background clarity */}
                     <div 
-                      className={`absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/80 transition-opacity duration-500 z-10 ${
+                      className={`absolute inset-0 bg-gradient-to-b from-[#fafaf8]/20 via-[#ebe7e3]/35 to-[#fafaf8]/80 transition-opacity duration-500 z-10 ${
                         isHovered ? 'opacity-100' : 'opacity-0'
                       }`}
                     />
@@ -118,7 +118,7 @@ const TestimonialsCarousel = () => {
                         src={item.avatar} 
                         alt={item.name} 
                         className={`w-12 h-12 rounded-full object-cover border-2 transition-colors duration-300 ${
-                          isHovered ? 'border-white/80' : 'border-[#0f0f0f]'
+                          isHovered ? 'border-[#2b2b2b]/80' : 'border-[#0f0f0f]'
                         }`}
                       />
                       
@@ -127,7 +127,7 @@ const TestimonialsCarousel = () => {
                         <motion.div 
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
-                          className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white"
+                          className="w-10 h-10 rounded-full bg-[#fafaf8]/80 backdrop-blur-md flex items-center justify-center text-[#0f0f0f]"
                         >
                           <svg className="w-4 h-4 fill-current ml-0.5" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z"/>
@@ -139,7 +139,7 @@ const TestimonialsCarousel = () => {
                     {/* CENTER: Description Quote Block */}
                     <div className="relative z-20 mt-6 flex-grow">
                       <p className={`text-sm sm:text-base leading-relaxed transition-colors duration-300 line-clamp-6 ${
-                        isHovered ? 'text-white/90 font-light' : 'text-[#545454] font-normal'
+                        isHovered ? 'text-[#0f0f0f] font-normal' : 'text-[#545454] font-normal'
                       }`}>
                         {item.quote}
                       </p>
@@ -149,14 +149,14 @@ const TestimonialsCarousel = () => {
                     <div className="relative z-20 pt-4 border-t border-transparent">
                       <h4 
                         className={`text-xl font-serif tracking-wide transition-colors duration-300 ${
-                          isHovered ? 'text-white' : 'text-[#0f0f0f]'
+                          isHovered ? 'text-[#0f0f0f]' : 'text-[#0f0f0f]'
                         }`}
                         style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}
                       >
                         {item.name}
                       </h4>
                       <p className={`text-xs mt-1 transition-colors duration-300 ${
-                        isHovered ? 'text-white/70' : 'text-[#8a8a8a]'
+                        isHovered ? 'text-[#545454]' : 'text-[#8a8a8a]'
                       }`}>
                         {item.role}
                       </p>

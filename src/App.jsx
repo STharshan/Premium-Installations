@@ -8,11 +8,15 @@ import CaseStudy from "./pages/CaseStudy";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
+import ScrollToHash from "./Component/ScrollToHash";
+import ScrollToTop from "./Component/ScrollToTop";
 
 function App() {
 
   return (
     <Router>
+      <ScrollToTop />
+      <ScrollToHash />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

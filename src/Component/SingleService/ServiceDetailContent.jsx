@@ -83,38 +83,38 @@ const ServiceDetailContent = () => {
           </div>
 
           <div className="lg:col-span-1 lg:sticky lg:top-8 space-y-8">
-            <div className="bg-[#0f0f0f] text-white p-8 md:p-10 shadow-sm">
+            <div className="bg-white text-[#0f0f0f] p-8 md:p-10 shadow-sm ring-1 ring-[#c6c5c1]">
               <h3 className="text-xl md:text-2xl font-semibold leading-tight mb-8">
                 Fill out the form to receive a call
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="border-b border-[#2b2b2b] pb-2">
+                <div className="border-b border-[#c6c5c1] pb-2">
                   <input
                     type="text"
                     placeholder="Full name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-transparent text-white placeholder-[#8a8a8a] text-sm focus:outline-none"
+                    className="w-full bg-transparent text-[#0f0f0f] placeholder-[#8a8a8a] text-sm focus:outline-none"
                   />
                 </div>
-                <div className="border-b border-[#2b2b2b] pb-2">
+                <div className="border-b border-[#c6c5c1] pb-2">
                   <input
                     type="email"
                     placeholder="Email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full bg-transparent text-white placeholder-[#8a8a8a] text-sm focus:outline-none"
+                    className="w-full bg-transparent text-[#0f0f0f] placeholder-[#8a8a8a] text-sm focus:outline-none"
                   />
                 </div>
-                <div className="border-b border-[#2b2b2b] pb-2">
+                <div className="border-b border-[#c6c5c1] pb-2">
                   <input
                     type="tel"
                     placeholder="Phone number"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full bg-transparent text-white placeholder-[#8a8a8a] text-sm focus:outline-none"
+                    className="w-full bg-transparent text-[#0f0f0f] placeholder-[#8a8a8a] text-sm focus:outline-none"
                   />
                 </div>
 
@@ -129,12 +129,12 @@ const ServiceDetailContent = () => {
               </form>
 
               {status === 'success' && (
-                <div className="mt-4 text-xs text-[#c5c5c1] bg-[#2b2b2b] p-3 border border-[#545454]">
+                <div className="mt-4 text-xs text-[#545454] bg-[#ebe7e3] p-3 border border-[#c6c5c1]">
                   Thank you! Your submission has been received!
                 </div>
               )}
               {status === 'error' && (
-                <div className="mt-4 text-xs text-[#c5c5c1] bg-[#2b2b2b] p-3 border border-[#545454]">
+                <div className="mt-4 text-xs text-[#545454] bg-[#ebe7e3] p-3 border border-[#c6c5c1]">
                   Oops! Something went wrong while submitting the form.
                 </div>
               )}

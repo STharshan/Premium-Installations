@@ -39,7 +39,7 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section className="w-full bg-[#0f0f0f] text-white overflow-hidden">
+    <section className="w-full bg-[#fafaf8] text-[#0f0f0f] overflow-hidden">
       <div className="w-full grid grid-cols-1 lg:grid-cols-2">
         
         {/* Left Side: Testimonial Image Banner */}
@@ -52,9 +52,9 @@ const TestimonialSection = () => {
         </div>
 
         {/* Right Side: Content Wrapper */}
-        <div className="flex flex-col justify-center items-center text-center px-6 py-12 md:px-12 lg:px-20 bg-[#0f0f0f]">
+        <div className="flex flex-col justify-center items-center text-center px-6 py-12 md:px-12 lg:px-20 bg-[#ebe7e3]">
           
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-wide mb-8">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-wide mb-8 text-[#0f0f0f]">
             Client feedbacks
           </h2>
 
@@ -86,7 +86,7 @@ const TestimonialSection = () => {
             </p>
 
             {/* Author Name */}
-            <h4 className="text-white font-medium text-base mb-8">
+            <h4 className="text-[#0f0f0f] font-medium text-base mb-8">
               {testimonialsData[currentIndex].name}
             </h4>
           </div>

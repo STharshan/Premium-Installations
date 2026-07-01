@@ -53,7 +53,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="w-full bg-[#0f0f0f] text-white py-28 px-6 sm:px-10 lg:px-20 font-sans overflow-hidden flex items-center justify-center">
+    <section className="w-full bg-[#fafaf8] text-[#0f0f0f] py-28 px-6 sm:px-10 lg:px-20 font-sans overflow-hidden flex items-center justify-center">
       <div className="max-w-[1400px] w-full mx-auto perspective-[1500px]">
         
         {/* 3D FLOATING CANVAS INTERACTION CONTAINER */}
@@ -62,16 +62,16 @@ const FAQSection = () => {
           onMouseLeave={handleMouseLeave}
           style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
           transition={{ type: "spring", stiffness: 150, damping: 20 }}
-          className="w-full bg-[#2b2b2b] rounded-[24px] p-8 sm:p-12 lg:p-16 border border-[#545454]/60 shadow-[0_50px_100px_rgba(15,15,15,0.6)]"
+          className="w-full bg-white rounded-[24px] p-8 sm:p-12 lg:p-16 border border-[#c6c5c1] shadow-[0_30px_80px_rgba(15,15,15,0.08)]"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center" style={{ transform: "translateZ(30px)" }}>
             
             {/* LEFT SIDE COLUMN: Image Card */}
             <div className="lg:col-span-5 w-full">
-              <div className="relative overflow-hidden rounded-2xl shadow-[0_20px_50px_rgba(15,15,15,0.4)] border border-[#545454]/30">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2b2b2b]/30 to-transparent z-10 pointer-events-none" />
+              <div className="relative overflow-hidden rounded-2xl shadow-[0_20px_50px_rgba(15,15,15,0.12)] border border-[#c6c5c1]">
+                <div className="absolute inset-0  z-10 pointer-events-none" />
                 <img 
-                  src="https://images.unsplash.com/photo-1534224039826-c7a0dea0e66a?auto=format&fit=crop&w=900&q=80" 
+                  src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80" 
                   alt="Craftsman handling woodwork circular electric saw machinery inside academy studio" 
                   className="w-full h-[28rem] sm:h-[34rem] lg:h-[36rem] object-cover"
                   loading="lazy"
@@ -81,7 +81,7 @@ const FAQSection = () => {
 
             {/* RIGHT SIDE COLUMN: Header and Dynamic Sliding Accordions */}
             <div className="lg:col-span-7 space-y-8 w-full">
-              <h2 className="text-3xl sm:text-[2.3rem] font-bold uppercase tracking-tight text-white leading-none">
+              <h2 className="text-3xl sm:text-[2.3rem] font-bold uppercase tracking-tight text-[#0f0f0f] leading-none">
                 Frequently Asked Questions
               </h2>
 
@@ -94,21 +94,21 @@ const FAQSection = () => {
                       key={index} 
                       className={`transition-all duration-300 rounded-xl overflow-hidden border ${
                         isOpen 
-                          ? 'bg-[#2b2b2b] border-[#545454] shadow-[0_15px_30px_rgba(15,15,15,0.25)] translate-x-2' 
-                          : 'bg-[#2b2b2b]/80 border-[#545454]/60 hover:border-[#8a8a8a]/60'
+                          ? 'bg-[#fafaf8] border-[#c6c5c1] shadow-[0_15px_30px_rgba(15,15,15,0.08)] translate-x-2' 
+                          : 'bg-[#ebe7e3]/80 border-[#c6c5c1] hover:border-[#8a8a8a]/60'
                       }`}
                     >
                       {/* Accordion Clicking Button Trigger Row */}
                       <button
                         type="button"
                         onClick={() => setOpenIndex(isOpen ? null : index)}
-                        className="w-full flex items-center justify-between p-6 text-left font-semibold text-sm sm:text-[16px] tracking-wide text-white/95 focus:outline-none transition-colors cursor-pointer select-none"
+                        className="w-full flex items-center justify-between p-6 text-left font-semibold text-sm sm:text-[16px] tracking-wide text-[#0f0f0f] focus:outline-none transition-colors cursor-pointer select-none"
                       >
                         <span className="pr-4">{item.question}</span>
                         <motion.div
                           animate={{ rotate: isOpen ? 180 : 0 }}
                           transition={{ duration: 0.3, ease: "easeInOut" }}
-                          className="text-[#c5c5c1] shrink-0"
+                          className="text-[#8a8a8a] shrink-0"
                         >
                           <ChevronDown size={20} strokeWidth={2.5} />
                         </motion.div>
@@ -123,7 +123,7 @@ const FAQSection = () => {
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.35, ease: [0.25, 1, 0.5, 1] }}
                           >
-                            <div className="px-6 pb-6 pt-1 text-xs sm:text-[14px] leading-[1.65] text-[#c5c5c1] font-normal border-t border-[#545454]/20">
+                            <div className="px-6 pb-6 pt-1 text-xs sm:text-[14px] leading-[1.65] text-[#545454] font-normal border-t border-[#c6c5c1]">
                               {item.answer}
                             </div>
                           </motion.div>

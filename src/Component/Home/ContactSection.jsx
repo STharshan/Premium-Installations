@@ -38,7 +38,7 @@ export default function ContactSection() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <span className="h-px w-8 bg-[#c6c5c1]" />
-                <span className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#a6874c]">
+                <span className="text-[10px] text-[#8a8a8a] font-extrabold uppercase tracking-[0.18em]">
                   Contact Us
                 </span>
               </div>

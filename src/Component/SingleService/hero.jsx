@@ -15,7 +15,7 @@ const Hero = () => {
       }}
     >
       {/* Background Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f0f]/80 via-[#2b2b2b]/40 to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#2b2b2b]/75 via-[#545454]/35 to-transparent z-10" />
 
       {/* Content Container */}
       <div className="relative w-full max-w-[1200px] mx-auto px-6 pb-12 md:pb-16 z-20">

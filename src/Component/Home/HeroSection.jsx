@@ -44,9 +44,6 @@ export default function HeroSection() {
                     className="h-[340px] w-full object-cover sm:h-[430px] lg:h-[390px]"
                   />
                   <div className="absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-white/90 to-transparent" />
-                  <div className="absolute left-[-2.8rem] top-1/2 hidden -translate-y-1/2 rotate-180 text-[11px] font-medium uppercase tracking-[0.35em] text-[#8a8a8a] lg:block">
-                    Since 2015
-                  </div>
                 </div>
               </div>
 

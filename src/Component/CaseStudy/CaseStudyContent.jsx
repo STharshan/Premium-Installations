@@ -34,14 +34,14 @@ export default function ArupCaseStudyPage() {
   };
 
   return (
-    <div className="bg-[#0f0f0f] text-white min-h-screen font-sans selection:bg-[#2b2b2b] antialiased selection:text-white">
+    <div className="bg-[#fafaf8] text-[#0f0f0f] min-h-screen font-sans selection:bg-[#ebe7e3] antialiased selection:text-[#0f0f0f]">
       
       {/* SECTION 1: INTERACTIVE IMAGE GRID CONTROLLER */}
       <section className="max-w-[1440px] mx-auto px-6 pt-10 pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch">
           
           {/* Main big layout window frame (8 Columns wide) */}
-          <div className="lg:col-span-8 relative aspect-[16/10] bg-[#2b2b2b] overflow-hidden rounded-xs">
+          <div className="lg:col-span-8 relative aspect-[16/10] bg-[#ebe7e3] overflow-hidden rounded-xs border border-[#c6c5c1]">
             <img
               src={CASE_STUDY_IMAGES[currentSlideIndex].large}
               alt={CASE_STUDY_IMAGES[currentSlideIndex].alt}
@@ -51,14 +51,14 @@ export default function ArupCaseStudyPage() {
 
           {/* Right hand side context thumbnails stack structure (4 Columns wide) */}
           <div className="lg:col-span-4 flex flex-col gap-4">
-            <div className="flex-1 relative aspect-[16/10] lg:aspect-auto overflow-hidden bg-[#2b2b2b] border border-[#2b2b2b]/40 rounded-xs">
+            <div className="flex-1 relative aspect-[16/10] lg:aspect-auto overflow-hidden bg-[#ebe7e3] border border-[#c6c5c1] rounded-xs">
               <img
                 src={CASE_STUDY_IMAGES[currentSlideIndex].thumb_stack_1}
                 alt="Workspace preview frame alpha"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="flex-1 relative aspect-[16/10] lg:aspect-auto overflow-hidden bg-[#2b2b2b] border border-[#2b2b2b]/40 rounded-xs">
+            <div className="flex-1 relative aspect-[16/10] lg:aspect-auto overflow-hidden bg-[#ebe7e3] border border-[#c6c5c1] rounded-xs">
               <img
                 src={CASE_STUDY_IMAGES[currentSlideIndex].thumb_stack_2}
                 alt="Workspace preview frame beta"
@@ -107,12 +107,12 @@ export default function ArupCaseStudyPage() {
       <section className="max-w-[1440px] mx-auto px-6 py-12">
         
         {/* Dynamic upper breadcrumb block tracing line links */}
-        <div className="flex items-center gap-2 text-xs text-[#8a8a8a] uppercase tracking-widest font-mono mb-6">
+        <div className="flex items-center gap-2 text-xs text-gray-600 uppercase tracking-widest font-mono mb-6">
           <Link to="/" className="transition hover:text-white">Home</Link>
           <span>/</span>
           <Link to="/case-study" className="transition hover:text-white">Case studies</Link>
           <span>/</span>
-          <span className="text-[#c5c5c1]">{activeStudy.title}</span>
+          <span className="text-gray-800">{activeStudy.title}</span>
         </div>
 
         {/* Split structural layout representation */}
@@ -129,7 +129,7 @@ export default function ArupCaseStudyPage() {
               </h2>
             </div>
 
-            <p className="text-[#c5c5c1] text-base lg:text-lg leading-relaxed max-w-3xl">
+            <p className="text-gray-600 text-base lg:text-lg leading-relaxed max-w-3xl">
               {activeStudy.description} We developed this case study page so each selected project now opens in its own
               detail view while keeping the same premium presentation layout.
             </p>
@@ -139,10 +139,10 @@ export default function ArupCaseStudyPage() {
               
               {/* Core verified business project partners listing */}
               <div className="space-y-4">
-                <h3 className="text-xs font-bold uppercase tracking-widest text-[#8a8a8a]">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-gray-600">
                   Project partners
                 </h3>
-                <ul className="space-y-2.5 text-sm text-[#ebe7e3] font-medium">
+                <ul className="space-y-2.5 text-sm text-gray-600 font-medium">
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-[#a6874c] rounded-full" />
                     Arup Acoustics
@@ -164,11 +164,11 @@ export default function ArupCaseStudyPage() {
 
               {/* Verified client executive response endorsement review statement box */}
               <div className="border-l-2 border-[#a6874c] pl-5 space-y-2">
-                <p className="text-sm text-[#ebe7e3] font-medium italic leading-relaxed">
+                <p className="text-sm text-gray-600 font-medium italic leading-relaxed">
                   "Sustainability was important to us as was acoustic performance, creative and technical design. 
                   Overbury had the best balance of all three, along with delivery certainty."
                 </p>
-                <span className="block text-xs font-semibold uppercase text-[#8a8a8a] tracking-wider pt-1">
+                <span className="block text-xs font-semibold uppercase text-gray-600 tracking-wider pt-1">
                   Elliot Wishlade, Arup
                 </span>
               </div>
@@ -176,7 +176,7 @@ export default function ArupCaseStudyPage() {
             </div>
 
             {/* Read more summary extension footer segment section block */}
-            <div className="pt-6 text-[#c5c5c1] text-sm leading-relaxed max-w-3xl">
+            <div className="pt-6 text-black text-sm leading-relaxed max-w-3xl">
               <p>
                 Our team were delighted with the clear direction underpinning this office project in Edinburgh. The fit out in Arup's new George Street 
                 office must reduce the embodied carbon at every stage - from concept design through to site delivery.
@@ -193,7 +193,7 @@ export default function ArupCaseStudyPage() {
             
             {/* Meta Row Parameter Block 1 */}
           <div className="border-b border-[#2b2b2b] pb-4 flex items-center justify-between">
-              <div className="flex items-center gap-2.5 text-[#8a8a8a]">
+              <div className="flex items-center gap-2.5 text-gray-600">
                 <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 </svg>
@@ -205,7 +205,7 @@ export default function ArupCaseStudyPage() {
 
             {/* Meta Row Parameter Block 2 */}
             <div className="border-b border-[#2b2b2b] pb-4 flex items-center justify-between">
-              <div className="flex items-center gap-2.5 text-[#8a8a8a]">
+              <div className="flex items-center gap-2.5 text-gray-600">
                 <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5z" />
                 </svg>
@@ -216,7 +216,7 @@ export default function ArupCaseStudyPage() {
 
             {/* Meta Row Parameter Block 3 */}
             <div className="border-b border-[#2b2b2b] pb-4 flex items-center justify-between">
-              <div className="flex items-center gap-2.5 text-[#8a8a8a]">
+              <div className="flex items-center gap-2.5 text-gray-600">
                 <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
@@ -227,7 +227,7 @@ export default function ArupCaseStudyPage() {
 
             {/* Meta Row Parameter Block 4 */}
             <div className="border-b border-[#2b2b2b] pb-4 flex items-center justify-between">
-              <div className="flex items-center gap-2.5 text-[#8a8a8a]">
+              <div className="flex items-center gap-2.5 text-gray-600">
                 <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -242,27 +242,27 @@ export default function ArupCaseStudyPage() {
       </section>
 
       {/* SECTION 3: FOOTER PARALLAX REVEAL HERO STAGE WINDOW LINK */}
-      <section className="mt-8 border-t border-[#2b2b2b] bg-[#0f0f0f]">
+      <section className="mt-8 border-t border-[#c6c5c1] bg-[#fafaf8]">
         <div className="max-w-[1440px] mx-auto px-6 pt-12 pb-4">
-          <h2 className="text-xl font-bold tracking-tight text-white uppercase">
+          <h2 className="text-xl font-bold tracking-tight text-[#0f0f0f] uppercase">
             Explore another project
           </h2>
         </div>
 
         {/* Absolute screen tracking container banner system with custom cta actions overlay */}
-        <div className="relative w-full h-[55vh] min-h-[420px] bg-[#2b2b2b] overflow-hidden">
+        <div className="relative w-full h-[55vh] min-h-[420px] bg-[#ebe7e3] overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
             alt="Pinsent Masons consultation setup overview showcase"
             className="w-full h-full object-cover opacity-35"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#2b2b2b]/70 via-transparent to-transparent" />
 
           {/* Fixed contextual identity grid data display system wrapper */}
           <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-16 max-w-[1440px] mx-auto w-full text-white">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
               <div className="space-y-2">
-                <div className="flex items-center gap-2 text-[#8a8a8a] font-mono text-xs uppercase tracking-widest">
+                <div className="flex items-center gap-2 text-black font-mono text-xs uppercase tracking-widest">
                   <span>Pinsent Masons Workspace</span>
                 </div>
                 <h3 className="text-4xl lg:text-5xl font-black tracking-tight uppercase">
