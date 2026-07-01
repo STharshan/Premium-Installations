@@ -81,7 +81,7 @@ const TestimonialSection = () => {
             </div>
 
             {/* Content Text */}
-            <p className="text-[#c5c5c1] text-sm md:text-base leading-relaxed mb-6 max-w-lg px-2">
+            <p className="text-black text-sm md:text-base leading-relaxed mb-6 max-w-lg px-2">
               {testimonialsData[currentIndex].content}
             </p>
 
